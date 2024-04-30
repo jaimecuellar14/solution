@@ -1,17 +1,24 @@
 module.exports = {
     getAllMovements,
     getDeposits,
-    getWithDrawals
+    getWithDrawals,
+    test
 }
 
-function getAllMovements() {
-    return "Here is all of your movements";
+function test(req, res, next) {
+    res.json({ message: 'Test' })
 }
 
-function getDeposits() {
-    return "Here is all of the deposits";
+function getAllMovements(req, res, next) {
+    res.json({ message: 'Here is all of your movements' })
 }
 
-function getWithDrawals() {
-    return "Here is all of the withdrawals";
+function getDeposits(req, res, next) {
+    res.json({ message: 'Here is all of the deposits' })
+
+}
+
+function getWithDrawals(req, res, next) {
+    res.json({ message: 'Here is all of the withdrawals' })
+
 }

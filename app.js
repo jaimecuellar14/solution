@@ -1,5 +1,8 @@
 const express = require('express');
+const routes = require('./app/routes');
 const app = express();
+
+app.use(routes);
 
 app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Origin', '*');
@@ -8,7 +11,6 @@ app.use(function (req, res, next) {
     res.header('Access-Control-Allow-Methods', 'OPTIONS, GET, POST, PUT, PATCH, DELETE, HEAD');
     next();
 });
-
 
 app.listen(3000, function () {
     console.log("Running API")

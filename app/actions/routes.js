@@ -3,8 +3,7 @@ const controllers = require('./controllers/controllers');
 
 
 router.get('/', controllers.test);
-router.get('/all', controllers.getAllMovements);
-router.get('/deposits', controllers.getDeposits);
-router.get('/withdrawals', controllers.getWithDrawals);
+router.get('/deposit', controllers.deposit);
+router.get('/withdraw', controllers.withdraw);
 
 module.exports = router;

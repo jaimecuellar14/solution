@@ -31,7 +31,7 @@ function isCardActive(req, res, next) {
 
 function checkClient(iban, clients) {
     const clientExists = clients.find(client => iban === client.iban);
-    if (clientExists.length === 0) {
+    if (!clientExists) {
         return false;
     }
     return true

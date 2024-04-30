@@ -7,6 +7,6 @@ test('Existance of a client account throught IBAN', () => {
 
 
 test('Credict card active test', () => {
-    expect(middlewares.checkIfCardIsActive('GB94BARC10201530093459', clients)).toBe(false);
     expect(middlewares.checkIfCardIsActive('GB33BUKB20201555555555', clients)).toBe(true);
+    expect(middlewares.checkIfCardIsActive('GB94BARC10201530093459', clients)).toBe(false);
 })

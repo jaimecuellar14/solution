@@ -20,7 +20,7 @@ const accountsAsTempDB = [
             { action: 'deposit', ammount: 100, lastBalance: 800, newBalance: 900 },
             { action: 'withdraw', ammount: 90, lastBalance: 900, newBalance: 810 }
         ],
-        cards: { number: '1234', isCreditCard: 1, pin: pin2, active: 0 },
+        card: { number: '1234', isCreditCard: 1, pin: pin2, active: 0 },
         iban: 'GB94BARC10201530093459'
     },
 ]

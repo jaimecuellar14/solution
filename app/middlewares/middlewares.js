@@ -39,9 +39,6 @@ function checkClient(iban, clients) {
 
 function checkIfCardIsActive(iban, clients) {
     const client = clients.filter(client => client.iban === iban)[0];
-    if (client) {
-        const isCardActive = client.card.active;
-        return isCardActive;
-    }
-    return false;
+    const isCardActive = client.card.active;
+    return isCardActive;
 }

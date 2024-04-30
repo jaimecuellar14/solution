@@ -12,6 +12,7 @@ function identifyUSer(req, res, next) {
     if (!clientExists) {
         res.status(200).json({ message: 'Client doesnt exist' })
     }
+    req.iban = iban;
     next();
 }
 
@@ -22,6 +23,7 @@ function isCardActive(req, res, next) {
     if (!isCardActive) {
         res.status(200).json({ message: 'The clients card is not active' })
     }
+
     next();
 
 

@@ -5,13 +5,15 @@ module.exports = {
     test
 }
 
+const users = require('../../config/accounts')
+
 function test(req, res, next) {
     res.json({ message: 'All movements' })
 }
 
 
 function getAll(req, res, next) {
-    res.json({ message: 'All movements' })
+    res.json({ message: 'All movements', data: users })
 
 }
 
